@@ -1,0 +1,49 @@
+.icon {
+  display: inline-block;
+  font-size: 30px;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  fill: inherit;
+  stroke: inherit;
+
+    &-logo {@include icon-size(89, 253); }
+    &-e1 { @include icon-size(177, 115); }
+    &-automatic {@include icon-size(40);}
+    &-blueprint {@include icon-size(40);}
+    &-burger {@include icon-size(20, 31);}
+    &-call {@include icon-size(14);}
+    &-cart {@include icon-size(20);}
+    &-copyright {@include icon-size(10);}
+    &-close {@include icon-size(25, 32);}
+    &-electrician {@include icon-size(40);}
+    &-gen {@include icon-size(60);}
+    &-instr {@include icon-size(60);}
+    &-loupe {@include icon-size(14);}
+    &-maestro {@include icon-size(15, 25);}
+    &-mastercard {@include icon-size(15, 25);}
+    &-visa {@include icon-size(9, 25);}
+    &-medal {@include icon-size(15);}
+    &-minus {@include icon-size(20);}
+    &-plus {@include icon-size(20);}
+    &-question {@include icon-size(10);}
+    &-ruble {
+      @include icon-size(11, 9);
+      fill: currentColor;
+    }
+    &-serv {@include icon-size(60);}
+    &-user {@include icon-size(50);}
+    &-user-2 {@include icon-size(15);}
+    &-checkbox {
+      @include icon-size(14);
+      fill: var(--base-color1);
+      stroke:#fff
+    }
+    &-radio {
+      @include icon-size(20);
+      --fill-color: var(--base-color1);
+      --stroke-color:var(--base-color2-light);
+    }
+
+
+}

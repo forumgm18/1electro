@@ -1,0 +1,58 @@
+@import "vars";
+
+:root {
+  --base-color1: hsl(34,88%,59%); //#F2A33B;
+  --base-color1-light: hsl(34,86%,92%); //#FCEDD8;
+
+  --base-color2: hsl(222,26%,20%); //#262E41;
+  --base-color2-light: hsl(222,24%,25%); //#313B50;
+
+  --base-color3: hsl(222,100%,34%); //#0031AC;
+  --base-color3-light: hsl(223,100%,48%); //#0046F5;
+  --base-color3-lighter: hsl(223,52%,90%); //#D9E0F3;
+
+
+
+  --header-fixed-bgr: hsl(0,0%,98%);
+  --section-bgr: hsl(0,0%,96%);
+  --base-text:hsl(0,0%,20%);
+
+  --top-block-bgr: hsl(223,20%,93%); //#EAECF1
+  --top-block-main-page-bgr: hsl(204, 42%, 95%); //#eef4f8
+  --footer-copyright: hsla(223,24%,17%); //rgba(49, 59, 80, 0.4);
+
+  --form-placeholder: hsla(221,24%,25%,0.4); //rgba(49, 59, 80, 0.4);
+  --form-not-empty: hsl(224,22%,96%); //#F4F5F8;
+  --form-error: hsl(17,64%,50%); //#D05C2D
+
+  --form-border-radius: 2px;
+
+  --btn-border-radius: 4px;
+
+
+  --btn-text: #fff;
+  --btn-primary-text: #fff;
+  --btn-primary-hover: hsl(34,72%,47%); //#CC8322;
+  --btn-secondary-bgr: hsl(35,86%,92%); //#FCEDD8
+  --btn-secondary-border: hsla(34,88%,59%,.27); //rgba(242, 163, 59, 0.27)
+
+  --btn-secondary-hover-bgr: hsl(35,81%,77%); //#F3CC94
+
+  --link-default-hover: hsl(34,72%,47%); //#CC8322;
+
+  --promo-bgr: hsl(224,22%,96%); //#F4F5F8;
+  //--border: hsla(221,24%,25%,0.05); //rgba(49, 59, 80, 0.05);
+
+
+  --icon-question-opacity: 0.5;
+         --icon-logo-name: #313B50;
+    --icon-logo-copyright: #313B50;
+       --icon-logo-slogan: #F2A33B;
+
+
+
+
+  --burger-bgr-show: transparent;
+  --burger-bgr-color:transparent;
+
+}

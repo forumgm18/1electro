@@ -1,0 +1,185 @@
+@import "vars";
+/* Mixins:
+   ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+// px to em
+@function em($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}
+
+// size to one line
+@mixin icon-size($height, $width: $height) {
+  font-size:$height+px;
+  min-width:($width/$height)+em;
+  width:($width/$height)+em;
+}
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+// min-size to one line
+@mixin min-size($width, $height: $width) {
+  min-width: $width;
+  min-height: $height;
+}
+// max-size to one line
+@mixin max-size($width, $height: $width) {
+  max-width: $width;
+  max-height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+
+@mixin media-min-width($name, $breakpoints: $grid-breakpoints) {
+  //$min: breakpoint-min($name, $breakpoints);
+  $min: map-get($breakpoints, $name);
+
+  @if $min != 0 {
+    @media screen and (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin media-max-width($name, $breakpoints: $grid-breakpoints) {
+  //$min: breakpoint-min($name, $breakpoints);
+  $min: map-get($breakpoints, $name);
+
+  @if $min != 0 {
+    @media screen and (max-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin media-max-width2($breakpoint) {
+    @media screen and (max-width: $breakpoint + 'px') {
+      @content;
+    }
+}
+@mixin media-min-width2($breakpoint) {
+    @media screen and (min-width: $breakpoint + 'px') {
+      @content;
+    }
+}
+
+
+//Миксин для display: flex;
+@mixin dFlex($js : flex-start, $ai : flex-start, $fd : row , $fw: nowrap) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+//Миксин для display: flex;
+@mixin PosA($t : 0, $b : 0, $l : 0, $r : 0,) {
+  position: absolute;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+}
+
+//Миксин для Шрифта
+@mixin setFont ($ff, $fz, $fc, $fs : normal, $fw : normal, $lh: normal) {
+  font-family: $ff;
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: rem($fz);
+  //line-height: rem($lh);
+  line-height: $lh;
+  color: $fc;
+}
+
+//Миксин для Шрифта
+@mixin setFontBase ($fz, $fc, $fw : normal, $lh: normal, $ls: normal) {
+  font-family: $fBase;
+  font-weight: $fw;
+  //font-size: rem($fz);
+  font-size: $fz;
+  //line-height: rem($lh);
+  line-height: $lh;
+  color: $fc;
+  letter-spacing: $ls;
+}
+
+//Миксин для Шрифта
+@mixin setBorder ($bc: red, $bw: 1px, $bt: solid) {
+  border: $bw $bt $bc;
+}
+
+//Миксин для переполнения текста
+@mixin textOverflow ($h, $w:25%,$c:#fff) {
+  content: '';
+  //padding-left: 10px;
+  display: block;
+  height: $h;
+  width: $w;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  //background: $c;
+  //background: linear-gradient(90deg, transparent 10px, $c 100%);
+  background: linear-gradient(90deg, transparent 0%, $c 100%);
+
+}
+
+
+@mixin itemRadioCheckboxSvg {
+  //display: none;
+  display: block;
+  opacity: 0;
+  font-size: inherit;
+  line-height: 1;
+  margin: 0;
+}
+
+@mixin setVarWidth() {
+  width: calc(100%/var(--col) - 2*var(--m));
+}
+@mixin setVarMargin() {
+  margin-left: calc(-1*var(--m));
+  margin-right: calc(-1*var(--m));
+}
+

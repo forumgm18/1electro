@@ -1,0 +1,70 @@
+.shop2home {
+  &-section{
+    background-color: var(--section-bgr);
+    //padding-bottom: 144px;
+    padding-bottom: 94px;
+    padding-top: 50px;
+
+    @include media-max-width2(1200){   padding-bottom: 100px;   }
+    @include media-max-width2(768){ padding-top: 25px;  padding-bottom: 25px;   }
+
+
+    h3 {
+      margin-bottom: 40px;
+      @include media-max-width2(768) {      margin-bottom: 25px;   }
+
+    }
+  }
+  &-content{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include media-max-width2(1200) {
+      --m:20px;
+      @include setVarMargin();
+      background-color: #fff;
+      justify-content: center;
+    }
+
+
+    .btn{
+      max-width: 205px;
+      height: 40px;
+      margin-top: 25px;
+    }
+
+  }
+  &-text{
+    flex: 1 1 auto;
+    background-color: #fff;
+    padding: 30px;
+    max-width: 870px;
+    padding-right: 350px;
+
+    @include media-max-width2(1200) {
+      max-width: unset;
+      padding-left: var(--m);
+      padding-right: var(--m);
+
+    }
+    @include media-max-width2(768) {      padding-top: 25px;   }
+
+  }
+  &-img{
+    //margin-left: auto;
+    min-width: 790px;
+
+    position: absolute;
+    top: -68px;
+    right: -40px;
+
+    @include media-max-width2(1290) {  right: 0; }
+    @include media-max-width2(1200) {
+      position: static;
+      min-width: unset;
+
+    }
+  }
+}

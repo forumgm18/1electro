@@ -1,0 +1,134 @@
+footer {  margin-top: auto;}
+.footer{
+  &-row-1{
+    display: flex;
+    align-items: flex-start;
+    //justify-content: space-between;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: var(--base-color2-light);
+
+    @include media-max-width2(768){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  }
+  &-row-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--footer-copyright);
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+  &-logo-link{
+    --icon-logo-name:#fff;
+    margin-right: 65px;
+    margin-bottom: 30px;
+
+    @include media-max-width2(768){
+      order: 2;
+      margin-right: 0;
+    }
+
+  }
+  &-menu{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    width: 100%;
+
+    @include media-max-width2(768){justify-content: space-around}
+
+    &-block{
+      width: 100%;
+      //max-width: 420px;
+      margin-bottom: 15px;
+        @include media-max-width2(768){order: 1;}
+
+
+    }
+
+    .menu{
+      &-item{
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        min-width: 160px;
+          @include media-max-width2(768){    width: 33%;}
+          @include media-max-width2(576){    width: 100%;            text-align: center;}
+
+      }
+      &-link{
+        color: #fff;
+      }
+    }
+  }
+  &-contacts-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    min-width: 200px;
+    order: 3;
+
+    @include media-max-width2(768){
+      margin-right: auto;
+      align-items: center;
+      width: 100%;
+    }
+
+  }
+  &-address{
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 20px;
+
+    br {
+      @include media-max-width2(768){        display: none;}
+    }
+
+  }
+  &-phone-link{
+    //display: block;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  &-callback{
+    //display: block;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+
+  }
+
+}
+.copyright{
+  color: hsla(0,0%,100%,0.5);
+  font-size: 14px;
+}
+.policy-link{
+  color: hsla(0,0%,100%,0.5);
+  font-size: 14px;
+
+
+
+}
+.victory {
+  color: hsla(0,0%,100%,0.5);
+  font-size: 14px;
+
+    @include media-max-width2(576){display: none;}
+
+  a{ color:var(--base-color1)}
+}

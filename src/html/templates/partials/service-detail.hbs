@@ -1,0 +1,13 @@
+<section class="service-section container">
+<!--  <div class="container">-->
+    {{#if title}}
+      <h3>{{title}}</h3>
+    {{/if}}
+    <div class="service-content">
+      {{#each this.serviceDetail}}
+        {{> chunk/service-detail-card this}}
+      {{/each}}
+    </div>
+<!--  </div>-->
+
+</section>

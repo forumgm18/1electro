@@ -1,0 +1,25 @@
+    {{#if class }}
+        <a href="#" class="category-card {{class}}">
+    {{else}}
+        <a href="#" class="category-card">
+    {{/if}}
+
+      <div>
+        <div class="category-card-panel">
+          <img src="{{img}}" alt="">
+          <div class="category-card-content">
+            <div>
+
+    {{#if class }}
+              <div class="category-card-link">{{title}}</div>
+    {{else}}
+              <div class="category-card-title">{{title}}</div>
+              <div class="category-card-link">Перейти в категорию</div>
+    {{/if}}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>

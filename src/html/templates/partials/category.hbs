@@ -1,0 +1,14 @@
+<section class="category-section container">
+<!--  <div class="container">-->
+    {{#if title}}
+      <h3>{{title}}</h3>
+    {{/if}}
+    <div class="category-content">
+
+      {{#each this.category}}
+        {{> chunk/category-card this}}
+      {{/each}}
+
+    </div>
+<!--  </div>-->
+</section>

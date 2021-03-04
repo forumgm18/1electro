@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> partials/head title='Главная'}}
+
+<body class="main-page">
+{{> partials/header}}
+
+<div class="top-block">
+  <div class="container main-gradient">
+    <div class="main-banner">
+      <div class="main-banner-content">
+        <div class="main-banner-title">
+          <span>Первый электрический</span>
+          <svg class="icon icon-copyright"><use xlink:href="#icon-copyright"></use></svg>
+        </div>
+
+        <div class="main-banner-slogan">Весь мир электрики в твоих руках</div>
+        <div class="main-banner-buttons">
+          <a href="" class="btn btn-primary">Каталог продукции</a>
+          <a data-fancybox="" data-src="#callBack" data-modal="true" href="javascript:;" class="btn btn-secondary">Помочь мне с выбором</a>
+        </div>
+      </div>
+    </div>
+    <img src="/images/top-baner-bgr-phone.png" class="main-banner-img" alt="">
+
+  </div>
+
+</div>
+
+{{> partials/category title='Категории'}}
+{{> partials/main-about-us}}
+{{> partials/promo title='Акции'}}
+{{> partials/shop-to-home}}
+{{> partials/service title='Сервис и помощь' }}
+{{> partials/contact-us}}
+
+
+
+<div class="container">
+
+
+  <div style="display: none;">
+    <br>
+    <br>
+    <form action="">
+      <div class="form-line">
+        <div class="form-item">
+          <input type="text" placeholder="Имя" >
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <input type="text" placeholder="Имя required" required>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <input type="email" placeholder="email">
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <input type="tel" placeholder="Телеф">
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item disabled">
+          <input type="tel" placeholder="Телеф" >
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <textarea placeholder="textarea"></textarea>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <label class="radio">
+            <input type="radio" name="radio1" value="v1">
+            <span class="radio-item">
+            <svg class="icon icon-radio"><use xlink:href="#icon-radio"></use></svg>
+          </span>
+            <span class="radio-text">Текст радиокнопки</span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+        <div class="form-item">
+          <label class="radio">
+            <input type="radio" name="radio1" value="v1">
+            <span class="radio-item">
+            <svg class="icon icon-radio"><use xlink:href="#icon-radio"></use></svg>
+          </span>
+            <span class="radio-text"></span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+        <div class="form-item">
+          <label class="radio">
+            <input type="radio" name="radio1" value="v1">
+            <span class="radio-item">
+            <svg class="icon icon-radio"><use xlink:href="#icon-radio"></use></svg>
+          </span>
+            <span class="radio-text">Текст радиокнопки</span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+      <div class="form-line">
+        <div class="form-item">
+          <label class="checkbox">
+            <input type="checkbox" name="chb1" value="v1">
+            <span class="checkbox-item">
+            <svg class="icon icon-checkbox"><use xlink:href="#icon-checkbox"></use></svg>
+          </span>
+            <span class="checkbox-text">Текст радиокнопки</span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+        <div class="form-item">
+          <label class="checkbox">
+            <input type="checkbox" name="chb2" value="v1">
+            <span class="checkbox-item">
+            <svg class="icon icon-checkbox"><use xlink:href="#icon-checkbox"></use></svg>
+          </span>
+            <span class="checkbox-text"></span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+        <div class="form-item">
+          <label class="checkbox">
+            <input type="checkbox" name="chb3" value="v1">
+            <span class="checkbox-item">
+            <svg class="icon icon-checkbox"><use xlink:href="#icon-checkbox"></use></svg>
+          </span>
+            <span class="checkbox-text">Текст радиокнопки</span>
+          </label>
+          <div class="form-item-error">неправильно заполнено поле</div>
+        </div>
+      </div>
+    </form>
+
+
+    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+
+  </div>
+
+</div>
+{{> partials/footer}}
+{{> partials/scripts}}
+</body>
+</html>
+

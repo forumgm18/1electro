@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> partials/head title='Корзина'}}
+
+<body>
+{{> partials/header}}
+
+<section class="top-block container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs-item">
+        <a href="#">главная</a>
+      </li>
+      <li class="breadcrumbs-item active">Корзина</li>
+    </ul>
+    <h1>Корзина</h1>
+</section>
+
+<section class="basket-section container">
+  <div class="basket-content">
+    <div class="basket-items-block">
+      <h3 class="basket-title">Товары в корзине</h3>
+      <ul class="basket-items scrollbar-outer">
+        <li class="basket-item">
+          <div class="basket-item-name">
+            <span>Бокс с прозрачной крышкой IEK КМПн 2/4 на 4 модуля</span>
+            <a href="#" class="basket-item-delete"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></a>
+          </div>
+          <div class="basket-item-params-block">
+            <div class="basket-item-img"><img src="/images/promo/promo1.png" alt=""></div>
+            <ul class="basket-item-params">
+              <li>
+                <span class="title">Кол-во</span>
+                <span class="count-block">
+                  <span class="count down">-</span>
+                  <span class="count-total">
+                    <input type="number" min="1" value="999"><span>шт</span>
+                  </span>
+                  <span class="count up">+</span>
+                </span>
+              </li>
+
+              <li>
+                <span class="title">Стоимость</span>
+                <span class="value">
+                  <span>1170</span>
+                  <svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+                </span>
+              </li>
+
+              <li>
+                <span class="title">Сумма заказа</span>
+                <span class="value">
+                  <span>11700</span>
+                  <svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+                </span>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li class="basket-item">
+          <div class="basket-item-name">
+            <span>Бокс с прозрачной крышкой IEK КМПн 2/4 на 4 модуля</span>
+            <a href="#" class="basket-item-delete"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></a>
+          </div>
+          <div class="basket-item-params-block">
+            <div class="basket-item-img"><img src="/images/promo/promo2.png" alt=""></div>
+            <ul class="basket-item-params">
+              <li>
+                <span class="title">Кол-во</span>
+                <span class="count-block">
+                  <span class="count down">-</span>
+                  <span class="count-total">
+                    <input type="number" min="1" value="999"><span>шт</span>
+                  </span>
+                  <span class="count up">+</span>
+                </span>
+              </li>
+
+              <li>
+                <span class="title">Стоимость</span>
+                <span class="value">
+                  <span>1170</span>
+                  <svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+                </span>
+              </li>
+
+              <li>
+                <span class="title">Сумма заказа</span>
+                <span class="value">
+                  <span>11700</span>
+                  <svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+                </span>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </li>
+
+      </ul>
+      <div class="basket-total-block">
+        <div class="basket-total">
+          <div class="basket-total-label">Стоимость товара</div>
+          <div class="basket-total-sum">
+            <span>15954</span>
+            <svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+          </div>
+        </div>
+        <div class="basket-bonus">
+          <a href="#">+258</a> <span>Бонусов начислится за заказ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{> partials/promo n='4' linkText='Показать еще'}}
+
+
+{{> partials/footer}}
+{{> partials/scripts}}
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<section class="promo-section container">
+<!--  <div class="container">-->
+    {{#if title}}
+      <h3>{{title}}</h3>
+    {{/if}}
+    <div class="promo-content">
+      {{#if n}}
+        {{#forAll n}}
+          {{#each @root.promo}}
+            {{> chunk/promo-card this}}
+          {{/each}}
+        {{/forAll}}
+      {{else}}
+          {{#each this.promo}}
+            {{> chunk/promo-card this}}
+          {{/each}}
+      {{/if}}
+      <div class="promo-show-all">
+        <a href="#" class="btn btn-secondary">{{#if linkText}}{{linkText}}{{else}}Смотреть все акции{{/if}}</a>
+      </div>
+    </div>
+<!--  </div>-->
+
+</section>

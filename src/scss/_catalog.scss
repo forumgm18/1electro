@@ -1,0 +1,146 @@
+.catalog-item {
+  background-color: var(--section-bgr);
+  padding-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+    @include media-max-width2(768){padding-bottom: 25px;}
+
+
+  &-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 570px;
+    width: 49%;
+      @include media-max-width2(768){width: 100%; max-width: unset;}
+
+
+  }
+  &-description{
+    flex: 1 1 51%;
+    min-width: 50%;
+    padding-left: 30px;
+
+    @include media-max-width2(768){
+      min-width: unset;
+      flex: 1 1 auto;
+      padding-left: 0;
+    }
+
+  }
+}
+
+
+
+.specifications{
+  &-block{
+    margin-top: 40px;
+  }
+}
+
+.table {
+  background-color: #fff;
+  max-width: 570px;
+    @include media-max-width2(576){  margin: 0 -20px;}
+  .tr{
+    display: flex;
+    align-items: center;
+
+      &:not(:last-child){border-bottom: 1px solid rgba(49, 59, 80, 0.15);}
+  }
+  .td{
+    width: 50%;
+    padding: 8px 20px;
+      @include media-max-width2(576){
+        font-size: 14px;
+        padding: 8px 1px;
+        text-align: center;
+      }
+
+      &:first-child { padding-left: 20px;        text-align: left;}
+      &:last-child { padding-right: 20px;}
+
+  }
+}
+
+.price{
+  &s{
+    display: flex;
+    align-items: center;
+
+    >div {   margin-right: 20px;}
+  }
+  &-block{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &-actual{}
+  &-old{}
+}
+
+
+
+.to-basket {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+
+  input {  padding-right: 0px;}
+  .form-item {
+    margin: 0;
+    max-width: 90px;
+  }
+  .btn{
+    flex: 1 1 auto;
+    margin-left: 30px;
+    @include media-max-width2(380){margin-left: 20px;}
+  }
+}
+.number-arrows{
+  height: 48px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  background-color: #fff;
+  z-index: 10;
+
+}
+.arrow {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  --bw: 1px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border: 0px solid var(--base-color1);
+    border-top-width: var(--bw);
+    border-right-width: var(--bw);
+  }
+
+   &:hover{
+     --bw: 2px;
+   }
+
+  &.up{
+    &:before{
+      transform: rotate(-45deg);
+    }
+  }
+  &.down{
+    &:before{
+      transform: rotate(135deg);
+    }
+  }
+}

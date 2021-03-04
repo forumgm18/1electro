@@ -1,0 +1,121 @@
+
+/**
+ * «Гамбургер» превращается в «x».
+ * Берется исходное состояние, затем полоски плавно перемещаются в центр
+ * и трансформируются в «x».
+*/
+
+.burger {
+  //display: block;
+  position: relative;
+  //overflow: hidden;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+  //display: none;
+  min-width: $burgerW;
+  width: $burgerW;
+  min-height: $burgerH;
+  height: $burgerH;
+
+  background-color: var(--burger-bgr-color);
+
+  @include media-max-width2(1024) {display: block;}
+
+
+
+  &:focus { outline: none;}
+
+
+  span{
+    display: block!important;
+    position: absolute;
+    top: ($burgerH - $burgerLineH)/2;
+    left: $burgerPadding;
+    //right: $burgerPadding;
+    //width: $burgerW - 5px;
+    width: $burgerW;
+    height: $burgerLineH;
+    background: var(--base-color1);
+    //transition: background 0s 0.3s;
+    transition: background 0.3s 0.3s;
+    border-radius: 2px;
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      left: 0;
+      //width: 100%;
+      width: $burgerW;
+      height: $burgerLineH;
+      background-color: var(--base-color1);
+      content: "";
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
+      border-radius: 2px;
+    }
+
+    &:before {
+
+      top: -(($burgerH - $burgerLineH)/2 - $burgerPadding);
+      transition-property: top, transform;
+
+      //transition: top 0.3s 0.3s, transform 0.3s 0;
+
+
+    }
+
+    &:after {
+      bottom: -(($burgerH - $burgerLineH)/2 - $burgerPadding);
+      transition-property: bottom, transform;
+      //transition: bottom 0.3s 0.3s, transform 0.3s  0s;
+    }
+
+  }
+
+
+  /* активное состояние, т.е. меню открыто */
+  &.open {
+    background-color: var(--burger-bgr-show);
+
+    //background-color: var(--hover-base-color2);
+
+
+    span {
+      background: none;
+      transition-delay: 0s;
+
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+
+      }
+
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      &:before, &:after {
+        transition-delay: 0s, 0.3s;
+        background-color: var(--base-color1);
+        //background-color: red;
+
+      }
+
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+.btn{
+  @include dFlex(center,center);
+  @include setFontBase (16px, var(--btn-text), 500, 19px, 0.02em);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgba(49, 59, 80, 0.19);
+  border-radius: var(--btn-border-radius); //4px;
+  transition: .3s;
+  height: 50px;
+  padding: 15px 20px;
+  white-space: nowrap;
+
+  //width: 200px;
+  //margin-bottom: 30px;
+
+      &:hover, &:focus {
+        box-shadow: 0px 0px 20px rgba(49, 59, 80, 0.19);
+        color: var(--btn-text);
+        text-decoration: none;
+      }
+
+  &-primary {
+    background: var(--base-color1);
+    color: var(--btn-primary-text);
+
+    &:hover, &:focus {
+      background: var(--btn-primary-hover);
+      color: var(--btn-primary-text);
+    }
+
+
+  }
+  &-secondary {
+    background: var(--base-color1-light);
+    border: 1px solid var(--btn-secondary-border);
+
+    color: var(--base-color2-light);
+
+    &:hover, &:focus {
+      background: var(--btn-secondary-hover-bgr);
+      border: 1px solid var(--btn-secondary-border);
+      color: var(--base-color2-light);
+    }
+  }
+
+  &-disabled {
+    background: var(--base-color1);
+    color: #fff;
+    opacity: 0.4;
+
+    &:hover, &:focus {
+      background: var(--base-color1);
+      color: #fff;
+      opacity: 0.4;
+    }
+  }
+}
